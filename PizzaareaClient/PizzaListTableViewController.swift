@@ -118,7 +118,7 @@ class PizzaListTableViewController: UITableViewController {
         
         if segue.identifier == "pizza" {
             
-            //guard let vc = segue.destination as? PizzaV
+            //guard let vc = segue.destination as? PizzaVuewe
         }
         
     }

@@ -11,7 +11,6 @@
 		85171E30797BFB2FDABC4DA0 /* Pods_PizzaareaClientUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C293F4EABDFDC5804B7D3662 /* Pods_PizzaareaClientUITests.framework */; };
 		C6B222E480FF73136EFF8EFD /* Pods_PizzaareaClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7E4DE538C88E680FDD6BB5 /* Pods_PizzaareaClient.framework */; };
 		CD13458C224A3FCF00E5F857 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13458B224A3FCF00E5F857 /* AppDelegate.swift */; };
-		CD13458E224A3FCF00E5F857 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13458D224A3FCF00E5F857 /* ViewController.swift */; };
 		CD134591224A3FCF00E5F857 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD13458F224A3FCF00E5F857 /* Main.storyboard */; };
 		CD134593224A3FD100E5F857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD134592224A3FD100E5F857 /* Assets.xcassets */; };
 		CD134596224A3FD100E5F857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD134594224A3FD100E5F857 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,9 @@
 		CD1345BC224A540D00E5F857 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1345BB224A540D00E5F857 /* Order.swift */; };
 		CD1345BE224A555600E5F857 /* PizzaListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1345BD224A555600E5F857 /* PizzaListTableViewController.swift */; };
 		CD1345C0224A5C2700E5F857 /* PizzaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1345BF224A5C2700E5F857 /* PizzaTableViewCell.swift */; };
+		CD1345C2224A6DB600E5F857 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1345C1224A6DB600E5F857 /* Alamofire.framework */; };
+		CD1345C4224A6DC500E5F857 /* PusherSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1345C3224A6DC500E5F857 /* PusherSwift.framework */; };
+		CD1345C6224A77FE00E5F857 /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1345C5224A77FE00E5F857 /* PizzaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +51,6 @@
 		C293F4EABDFDC5804B7D3662 /* Pods_PizzaareaClientUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizzaareaClientUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD134588224A3FCF00E5F857 /* PizzaareaClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaareaClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD13458B224A3FCF00E5F857 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD13458D224A3FCF00E5F857 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD134590224A3FCF00E5F857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD134592224A3FD100E5F857 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD134595224A3FD100E5F857 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +65,9 @@
 		CD1345BB224A540D00E5F857 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		CD1345BD224A555600E5F857 /* PizzaListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaListTableViewController.swift; sourceTree = "<group>"; };
 		CD1345BF224A5C2700E5F857 /* PizzaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTableViewCell.swift; sourceTree = "<group>"; };
+		CD1345C1224A6DB600E5F857 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1345C3224A6DC500E5F857 /* PusherSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PusherSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD1345C5224A77FE00E5F857 /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
 		F1442869CB61082ACFA49F2F /* Pods-PizzaareaClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaareaClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaareaClientUITests/Pods-PizzaareaClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3ABB1CBEBF1B63B0D3C9070 /* Pods-PizzaareaClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaareaClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaareaClientUITests/Pods-PizzaareaClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9DD58D8CA063FC82FBB2514 /* Pods-PizzaareaClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaareaClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaareaClientTests/Pods-PizzaareaClientTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1345C4224A6DC500E5F857 /* PusherSwift.framework in Frameworks */,
+				CD1345C2224A6DB600E5F857 /* Alamofire.framework in Frameworks */,
 				C6B222E480FF73136EFF8EFD /* Pods_PizzaareaClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				CD13458B224A3FCF00E5F857 /* AppDelegate.swift */,
-				CD13458D224A3FCF00E5F857 /* ViewController.swift */,
 				CD13458F224A3FCF00E5F857 /* Main.storyboard */,
 				CD134592224A3FD100E5F857 /* Assets.xcassets */,
 				CD134594224A3FD100E5F857 /* LaunchScreen.storyboard */,
@@ -145,6 +150,7 @@
 				CD1345BB224A540D00E5F857 /* Order.swift */,
 				CD1345BD224A555600E5F857 /* PizzaListTableViewController.swift */,
 				CD1345BF224A5C2700E5F857 /* PizzaTableViewCell.swift */,
+				CD1345C5224A77FE00E5F857 /* PizzaViewController.swift */,
 			);
 			path = PizzaareaClient;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 		F11A10FC172B5B6CE88F4402 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD1345C3224A6DC500E5F857 /* PusherSwift.framework */,
+				CD1345C1224A6DB600E5F857 /* Alamofire.framework */,
 				6D7E4DE538C88E680FDD6BB5 /* Pods_PizzaareaClient.framework */,
 				3395730174A742880B176D29 /* Pods_PizzaareaClientTests.framework */,
 				C293F4EABDFDC5804B7D3662 /* Pods_PizzaareaClientUITests.framework */,
@@ -389,12 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD13458E224A3FCF00E5F857 /* ViewController.swift in Sources */,
 				CD1345BE224A555600E5F857 /* PizzaListTableViewController.swift in Sources */,
 				CD13458C224A3FCF00E5F857 /* AppDelegate.swift in Sources */,
 				CD1345BC224A540D00E5F857 /* Order.swift in Sources */,
 				CD1345C0224A5C2700E5F857 /* PizzaTableViewCell.swift in Sources */,
 				CD1345BA224A53E300E5F857 /* Pizza.swift in Sources */,
+				CD1345C6224A77FE00E5F857 /* PizzaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
