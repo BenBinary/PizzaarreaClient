@@ -27,7 +27,7 @@ class PizzaViewController: UIViewController {
             "pizza_id": pizza!.id,
             "user_id": "AppMisc.USER_ID"
         ]
-        Alamofire.request("http://172.17.26.104:4000/orders", method: .post, parameters: parameters)
+        Alamofire.request("http://127.0.0.1:4000/orders", method: .post, parameters: parameters)
             .validate()
             .responseJSON { response in
                 guard response.result.isSuccess else { return self.alertError() }

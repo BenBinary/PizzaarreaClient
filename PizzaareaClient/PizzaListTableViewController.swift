@@ -14,9 +14,6 @@ class PizzaListTableViewController: UITableViewController {
     var pizzas: [Pizza] = []
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +44,7 @@ class PizzaListTableViewController: UITableViewController {
     private func fetchInventory(completion: @escaping ([Pizza]?) -> Void ) {
         
         
-        Alamofire.request("http://172.17.26.104:4000/inventory", method: .get)
+        Alamofire.request("http://127.0.0.1:4000/inventory", method: .get)
             
             .validate()
             .responseJSON {
@@ -118,7 +115,9 @@ class PizzaListTableViewController: UITableViewController {
         
         if segue.identifier == "pizza" {
             
-            //guard let vc = segue.destination as? PizzaVuewe
+            guard let vc = segue.destination as? PizzaViewController else { return }
+            
+            vc.pizza = sender as? Pizza
         }
         
     }
