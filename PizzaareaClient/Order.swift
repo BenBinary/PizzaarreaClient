@@ -13,6 +13,7 @@ struct Order {
     let pizza: Pizza
     var status: OrderStatus
     
+    /*
     init(id: String, pizza: [String: Any], status: String) {
         
         self.id = id
@@ -20,7 +21,7 @@ struct Order {
         self.status = status
         
     }
-    
+    */
 }
 enum OrderStatus: String {
     case pending = "Pending"

@@ -24,6 +24,7 @@
 		CD1345C4224A6DC500E5F857 /* PusherSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1345C3224A6DC500E5F857 /* PusherSwift.framework */; };
 		CD1345C6224A77FE00E5F857 /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1345C5224A77FE00E5F857 /* PizzaViewController.swift */; };
 		CD4872322253B987004BCB2C /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4872312253B987004BCB2C /* OrdersTableViewController.swift */; };
+		CDB705522255285600E2F2E5 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB705512255285600E2F2E5 /* OrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		CD1345C3224A6DC500E5F857 /* PusherSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PusherSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1345C5224A77FE00E5F857 /* PizzaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
 		CD4872312253B987004BCB2C /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		CDB705512255285600E2F2E5 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		F1442869CB61082ACFA49F2F /* Pods-PizzaareaClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaareaClientUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaareaClientUITests/Pods-PizzaareaClientUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F3ABB1CBEBF1B63B0D3C9070 /* Pods-PizzaareaClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaareaClientUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaareaClientUITests/Pods-PizzaareaClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F9DD58D8CA063FC82FBB2514 /* Pods-PizzaareaClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizzaareaClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PizzaareaClientTests/Pods-PizzaareaClientTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				CD1345BF224A5C2700E5F857 /* PizzaTableViewCell.swift */,
 				CD1345C5224A77FE00E5F857 /* PizzaViewController.swift */,
 				CD4872312253B987004BCB2C /* OrdersTableViewController.swift */,
+				CDB705512255285600E2F2E5 /* OrderViewController.swift */,
 			);
 			path = PizzaareaClient;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				CD1345C0224A5C2700E5F857 /* PizzaTableViewCell.swift in Sources */,
 				CD1345BA224A53E300E5F857 /* Pizza.swift in Sources */,
 				CD1345C6224A77FE00E5F857 /* PizzaViewController.swift in Sources */,
+				CDB705522255285600E2F2E5 /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
