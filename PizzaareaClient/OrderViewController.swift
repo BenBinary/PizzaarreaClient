@@ -13,11 +13,13 @@ class OrderViewController: UIViewController {
     var order: Order?
     
     @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var activityView: UIActivityIndicatorView!
+    @IBOutlet weak var activityView: activityIndicator!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityView.startLoading()
 
         navigationItem.title = order?.pizza.name
         
@@ -30,10 +32,9 @@ class OrderViewController: UIViewController {
             status.text = "Order is on its way"
         case .delivered:
             status.text = "Order delivered"
-            activityView.color = #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1)
-            
-        default:
-            <#code#>
+            activityView.strokeColor = UIColor.green
+            activityView.completeLoading(success: true)
+       
         }
         
         

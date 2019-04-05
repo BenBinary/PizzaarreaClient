@@ -49,13 +49,13 @@ class OrdersTableViewController: UITableViewController {
                 ordersDict -> Order? in
                 
                 guard let orderId = ordersDict!["id"] as? String,
-                let orderStatus = ordersDict!["status"],
+                let orderStatus = ordersDict!["status"] as? String,
                 var pizza = ordersDict!["pizza"] as? [String: Any] else { return nil }
                 
                 pizza["image"] = UIImage(named: pizza["image"] as! String)
                 
                 
-                return Order(id: orderId, pizza: pizza, status: orderStatus as! String)
+                return Order(id: orderId, pizza: Pizza(data: pizza), status: OrderStatus(rawValue: orderStatus)!)
             }
             
             completion(orders)

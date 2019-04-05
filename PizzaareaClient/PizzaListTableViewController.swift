@@ -26,6 +26,12 @@ class PizzaListTableViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        fetchInventory { pizzas in
+            guard pizzas != nil else { return }
+            self.pizzas = pizzas!
+            self.tableView.reloadData()
+        }
     }
     
     // MARK: - Table view data source
@@ -47,10 +53,9 @@ class PizzaListTableViewController: UITableViewController {
         Alamofire.request("http://127.0.0.1:4000/inventory", method: .get)
             
             .validate()
-            .responseJSON {
+            .responseJSON { response in
                 
-                
-                response in guard response.result.isSuccess else {
+                guard response.result.isSuccess else {
                     return completion(nil)
                 }
                 
@@ -61,6 +66,8 @@ class PizzaListTableViewController: UITableViewController {
                     
                 }
                 
+                
+                // Auseinanderpacken der Daten die durch die HTTP-GET angefordert wurden.
                 let inventory = rawInventory.flatMap { pizzaDict -> Pizza? in
                     
                     var data = pizzaDict!
@@ -81,10 +88,6 @@ class PizzaListTableViewController: UITableViewController {
         performSegue(withIdentifier: "orders", sender: nil)
         
     }
-    
-    
-    
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

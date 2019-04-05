@@ -10,15 +10,16 @@ import UIKit
 import Alamofire
 class PizzaViewController: UIViewController {
     var pizza: Pizza?
+    
     @IBOutlet weak var amount: UILabel!
     @IBOutlet weak var pizzaDescription: UILabel!
-    @IBOutlet weak var pizzaImageView: UIImageView!
+    @IBOutlet weak var pizzaImageView: UIImageView?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = pizza!.name
-        pizzaImageView.image = pizza!.image
+        pizzaImageView?.image = pizza?.image
         pizzaDescription.text = pizza!.description
         amount.text = "$\(String(describing: pizza!.amount))"
     }
