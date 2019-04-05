@@ -8,26 +8,39 @@
 
 import UIKit
 import Alamofire
+
 class PizzaViewController: UIViewController {
+    
     var pizza: Pizza?
     
     @IBOutlet weak var amount: UILabel!
+  
+   @IBOutlet weak var pizzaImageView: UIImageView!
+    @IBOutlet weak var btnPlaceOrder: UIButton!
+//
     @IBOutlet weak var pizzaDescription: UILabel!
-    @IBOutlet weak var pizzaImageView: UIImageView?
-    
+//    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //  print(pizza)
+        
+        if (pizza != nil) {
         navigationItem.title = pizza!.name
-        pizzaImageView?.image = pizza?.image
+        pizzaImageView.image = pizza?.image
         pizzaDescription.text = pizza!.description
-        amount.text = "$\(String(describing: pizza!.amount))"
+        amount.text = "$\(String(describing: pizza!.amount))" }
     }
+    
+    
     @IBAction func buyButtonPressed(_ sender: Any) {
+        
         let parameters = [
             "pizza_id": pizza!.id,
             "user_id": "AppMisc.USER_ID"
         ]
+        
         Alamofire.request("http://127.0.0.1:4000/orders", method: .post, parameters: parameters)
             .validate()
             .responseJSON { response in
@@ -37,6 +50,8 @@ class PizzaViewController: UIViewController {
                 successful ? self.alertSuccess() : self.alertError()
         }
     }
+    
+    
     private func alertError() {
         return self.alert(
             title: "Purchase unsuccessful!",

@@ -13,7 +13,7 @@
         <!--Pizza View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PizzaViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PizzaViewController" customModule="PizzaareaClient" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,23 +22,18 @@
                                 <rect key="frame" x="40" y="95" width="232" height="198"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$49.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-tn-Ugy">
-                                <rect key="frame" x="85" y="395" width="142" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmC-Sk-piP">
-                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AmC-Sk-piP">
+                                <rect key="frame" x="0.0" y="468" width="320" height="100"/>
                                 <color key="backgroundColor" red="0.67039209604263306" green="0.2931782603263855" blue="0.58342200517654419" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5cb-2t-fz3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Place Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nkz-4O-rc0"/>
+                                    <action selector="buyButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pb-E3-Orc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mq-Ek-u8f">
@@ -54,20 +49,60 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$49.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sb-tn-Ugy">
+                                <rect key="frame" x="89" y="390" width="142" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.62434524297714233" green="0.31764450669288635" blue="0.57257300615310669" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="AmC-Sk-piP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N7Y-uh-NOd"/>
+                            <constraint firstItem="AmC-Sk-piP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Sgl-Gg-YcE"/>
+                            <constraint firstItem="AmC-Sk-piP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V7n-Xg-nr1"/>
+                            <constraint firstItem="AmC-Sk-piP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e1J-H9-Qie"/>
+                            <constraint firstItem="AmC-Sk-piP" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fos-qO-dPE"/>
+                            <constraint firstItem="AmC-Sk-piP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gxm-CU-We3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="amount" destination="8sb-tn-Ugy" id="Krw-H8-U6H"/>
-                        <outlet property="pizzaDescription" destination="8mq-Ek-u8f" id="sZa-57-DPg"/>
-                        <outlet property="pizzaImageView" destination="xGm-Bs-K0l" id="B8f-xK-Zkl"/>
+                        <outlet property="amount" destination="8sb-tn-Ugy" id="bhL-VK-uNg"/>
+                        <outlet property="btnPlaceOrder" destination="AmC-Sk-piP" id="IEb-00-8Gc"/>
+                        <outlet property="pizzaDescription" destination="8mq-Ek-u8f" id="07h-g6-d8z"/>
+                        <outlet property="pizzaImageView" destination="xGm-Bs-K0l" id="GR5-mA-kde"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="802"/>
+            <point key="canvasLocation" x="1865.625" y="801.76056338028172"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="GnT-zL-G5w">
+            <objects>
+                <viewController id="kNi-Um-Lhg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vjX-My-Ash">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hallo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtH-uX-Rc1">
+                                <rect key="frame" x="110" y="219" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fXb-Ed-Ayn"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WhR-a4-2dN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="-77"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="Joy-TD-tF2">
@@ -117,7 +152,7 @@
                                     <outlet property="miscellaneousText" destination="Jjg-Na-kWe" id="g3w-YB-5Rw"/>
                                     <outlet property="name" destination="IOU-nf-b38" id="fHi-4B-wYw"/>
                                     <outlet property="pizzaImageView" destination="jmz-jP-7Ox" id="H2S-vn-1zI"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="pizza" id="dVz-MC-bDY"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="pizza" trigger="accessoryAction" id="Yls-vO-bpL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -128,15 +163,21 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="6VU-gd-Qvg">
                         <barButtonItem key="backBarButtonItem" title="Orders" id="d6f-qx-Zfz"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="mAR-bZ-Skp">
+                        <barButtonItem key="leftBarButtonItem" title="test" style="plain" id="Tbf-Pf-vjP">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7qO-T5-0bA">
+                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Orde" style="plain" id="mAR-bZ-Skp">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ow1-7Z-Eb8">
                                 <rect key="frame" x="221" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Orders"/>
                             </button>
                             <connections>
-                                <action selector="ordersButtonPressed:" destination="2e1-AE-C4B" id="YzU-sU-D9V"/>
-                                <segue destination="o23-PS-3vA" kind="presentation" id="Rr4-am-KIW"/>
+                                <segue destination="o23-PS-3vA" kind="show" identifier="orders" id="az1-4X-N7X"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -148,7 +189,7 @@
         <!--Root View Controller-->
         <scene sceneID="9Ml-PV-0yu">
             <objects>
-                <tableViewController id="0gq-mh-miq" sceneMemberID="viewController">
+                <tableViewController id="0gq-mh-miq" customClass="OrdersTableViewController" customModule="PizzaareaClient" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Dfg-xb-Cqj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
