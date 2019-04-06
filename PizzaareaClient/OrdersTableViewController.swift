@@ -142,7 +142,8 @@ class OrdersTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "order" {
-            //guard let vc = segue.destination as? OrderView
+            guard let vc = segue.destination as? OrderViewController else { return }
+            vc.order = sender as? Order
         }
         
     }

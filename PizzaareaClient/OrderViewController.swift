@@ -13,13 +13,16 @@ class OrderViewController: UIViewController {
     var order: Order?
     
     @IBOutlet weak var status: UILabel!
-    @IBOutlet weak var activityView: activityIndicator!
+    @IBOutlet weak var activityView: activityIndicator?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityView.startLoading()
+        
+        //print(activityView!.fontSize)
+        //print(activityView!.tintColor)
+        //activityView.startLoading()
 
         navigationItem.title = order?.pizza.name
         
@@ -32,27 +35,11 @@ class OrderViewController: UIViewController {
             status.text = "Order is on its way"
         case .delivered:
             status.text = "Order delivered"
-            activityView.strokeColor = UIColor.green
-            activityView.completeLoading(success: true)
+            //activityView?.strokeColor = UIColor.green
+           // activityView?.completeLoading(success: true)
        
         }
         
-        
-        
-        
-        
-        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }
